@@ -9,3 +9,4 @@ share/
 *.pyc
 *.egg-info/
 tk17_tg_bot/keys.py
+.cache/
