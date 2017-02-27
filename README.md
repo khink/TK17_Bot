@@ -1,6 +1,6 @@
 # Tweede kamerverkiezingen Telegram Bot
 
-This is Telegram bot to add a poll for the 2017 Dutch parliament elections.
+This is a Telegram bot to add a poll for the 2017 Dutch parliament elections.
 
 
 ## About TK17_Bot
