@@ -32,7 +32,8 @@ Just like in some types of political debate, there is no room for nuance here :)
 
 ## About the software
 
-This bot was programmed in Python using pyTelegramBotAPI.
+This bot was programmed in Python using
+[pyTelegramBotAPI](https://github.com/eternnoir/pyTelegramBotAPI#).
 
 
 ### How to install
