@@ -84,3 +84,10 @@ listed above.
 ### Development
 
 Pull requests are welcome!
+
+
+### License
+
+GPLv3.
+
+See https://www.gnu.org/licenses/gpl-3.0.txt or the LICENSE.txt.
