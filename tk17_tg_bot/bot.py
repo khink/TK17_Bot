@@ -15,7 +15,7 @@ from tk17_tg_bot.constants import (
 )
 
 logger = logger
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)
 
 bot = TK17TgBot(TOKEN)
 
