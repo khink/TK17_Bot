@@ -87,13 +87,20 @@ listed above.
 Pull requests are welcome!
 
 
+### Tests
+
+Using [pytest](http://doc.pytest.org/en/latest/). Run:
+
+`pytest tk17_tg_bot`
+
+
 ### Roadmap
 
 - Persistent storage (don't lose all data on process shutdown)
 - Run as server process
 - Logging
 - Confidential voting (don't show channel what you voted)
-- Testing
+- More tests
 - Nicer result rendering (pie chart, percentage, number of seats)
 - Enable closing the poll
 
