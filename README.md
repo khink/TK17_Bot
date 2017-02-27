@@ -47,8 +47,8 @@ python setup.py install
 
 ### Configure
 
-Place the Telegram Bot API token in `tk17_tg_bot/keys.py` as in
-`keys.py.example`:
+Place the [Telegram Bot API token](https://core.telegram.org/bots)
+in `tk17_tg_bot/keys.py` as in `keys.py.example`:
 
 `TOKEN = ''`
 
