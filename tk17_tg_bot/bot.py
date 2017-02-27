@@ -17,13 +17,6 @@ from tk17_tg_bot.constants import (
 logger = logger
 logger.setLevel(logging.DEBUG)
 
-
-def _help_vote(msg=''):
-    """Help for the vote command."""
-    msg += "Geldige opties zijn:\n"
-    msg += "\n".join(VOTING_OPTIONS)
-    return msg
-
 bot = TK17TgBot(TOKEN)
 
 
@@ -34,14 +27,16 @@ def handle_vote(message):
         vote_option = message.text.split(COMMAND_VOTE)[1].strip()
     except IndexError:
         # empty vote
-        bot.reply_to(message, _help_vote("Waarop wil je stemmen? "))
+        bot.reply_to(message, "Maak een keuze:",
+                     reply_markup=markup_options())
         return
     if vote_option.lower() in ['hitler', 'putin', 'trump']:
         bot.reply_to(message,
                      "That option is not available, but PVV is close. ")
     if vote_option not in VOTING_OPTIONS:
         # invalid choice
-        bot.reply_to(message, _help_vote("Kies een geldige stemoptie. "))
+        bot.reply_to(message, "Maak een keuze:",
+                     reply_markup=markup_options())
         return
     bot.reply_to(
         message,
