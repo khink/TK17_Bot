@@ -39,6 +39,7 @@ PARTIES = [
 OTHER_OPTIONS = [
     'blanco',
     'niet',
+    'zwevend',
 ]
 
 VOTING_OPTIONS = PARTIES + OTHER_OPTIONS
