@@ -32,6 +32,7 @@ def handle_vote(message):
         return
     if vote_option.lower() in ['hitler', 'putin', 'trump']:
         bot.reply_to(message, "Die hebben we niet, maar probeer de PVV eens. ")
+        return
     if vote_option not in VOTING_OPTIONS:
         # invalid choice
         bot.reply_to(message, "Maak een keuze:",
