@@ -25,6 +25,10 @@ There's also options for:
 - blanco ("I will go voting but i'll leave it empty")
 - niet ("I will stay at home and play Rocket League")
 
+There's no option for "undecided", because in the end you would end up choosing
+one of the other options.
+Just like in some types of political debate, there is no room for nuance here :)
+
 
 ## About the software
 
