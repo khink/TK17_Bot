@@ -86,6 +86,17 @@ listed above.
 Pull requests are welcome!
 
 
+### Roadmap
+
+- Persistent storage (don't lose all data on process shutdown)
+- Run as server process
+- Logging
+- Confidential voting (don't show channel what you voted)
+- Testing
+- Nicer result rendering (pie chart, percentage, number of seats)
+- Enable closing the poll
+
+
 ### License
 
 GPLv3.
