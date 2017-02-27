@@ -61,6 +61,9 @@ def main():
             # empty vote
             bot.reply_to(message, _help_vote("Waarop wil je stemmen? "))
             return
+        if vote_option.lower() in ['hitler', 'putin', 'trump']:
+            bot.reply_to(message,
+                         "That option is not available, but PVV is close. ")
         if vote_option not in VOTING_OPTIONS:
             # invalid choice
             bot.reply_to(message, _help_vote("Kies een geldige stemoptie. "))
