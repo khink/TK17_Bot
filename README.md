@@ -12,6 +12,7 @@ To use this bot in Telegram, search for the user `TK17_Bot` and add it to a chat
 
 - `/stem {OPTION}` casts a vote (shows list of options if empty)
 - `/uitslag` shows results
+- `/opties` shows the list of options
 
 
 ### Voting options

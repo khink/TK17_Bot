@@ -36,10 +36,5 @@ setup(
         'Topic :: Utilities',
         'Programming Language :: Python',
     ],
-    entry_points={
-        'console_scripts': [
-            'run_bot = tk17_tg_bot.__main__:main',
-        ],
-    },
     install_requires=reqs,
 )
