@@ -12,8 +12,7 @@ class Result(object):
         """Render as string."""
         if not self.votes:
             return "Er is nog niet gestemd."
-        return '\n'.join(
-            ["%s: %s" % (key, value)
-             for key, value in sorted(self.votes.iteritems(),
-                                      key=self.votes.get,
-                                      reverse=True)])
+        return '\n'.join(["%s: %s" % (key, self.votes[key])
+                          for key in sorted(self.votes,
+                                            key=self.votes.get,
+                                            reverse=True)])
