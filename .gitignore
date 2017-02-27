@@ -1,0 +1,11 @@
+.Python
+bin/
+build/
+dist/
+include/
+lib/
+pip-selfcheck.json
+share/
+*.pyc
+*.egg-info/
+tk17_tg_bot/keys.py
