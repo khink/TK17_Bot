@@ -31,9 +31,11 @@ This bot was programmed in Python using pyTelegramBotAPI.
 
 ## How to install
 
-  virtualenv .
-  . bin/activate
-  python setup.py install
+```
+virtualenv .
+. bin/activate
+python setup.py install
+```
 
 
 ## Configure
@@ -41,12 +43,12 @@ This bot was programmed in Python using pyTelegramBotAPI.
 Place the Telegram Bot API token in `tk17_tg_bot/keys.py` as in
 `keys.py.example`:
 
-  TOKEN = ''
+`TOKEN = ''`
 
 
 ## How to run
 
-  ./bin/run_bot
+`./bin/run_bot`
 
 
 ## Storage
