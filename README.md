@@ -2,9 +2,10 @@
 
 This is Telegram bot to add a poll for the 2017 Dutch parliament elections.
 
-## Usage
 
-To use it in Telegram, search for the user `TK17_Bot` and add it to a chat.
+## About TK17_Bot
+
+To use this bot in Telegram, search for the user `TK17_Bot` and add it to a chat.
 
 
 ###  Commands
@@ -24,12 +25,12 @@ There's also options for:
 - niet ("I will stay at home and play Rocket League")
 
 
-## About
+## About the software
 
 This bot was programmed in Python using pyTelegramBotAPI.
 
 
-## How to install
+### How to install
 
 ```
 virtualenv .
@@ -38,25 +39,32 @@ python setup.py install
 ```
 
 
-## Configure
+### Configure
 
 Place the Telegram Bot API token in `tk17_tg_bot/keys.py` as in
 `keys.py.example`:
 
 `TOKEN = ''`
 
+Using Botfather, add an image to the bot, and edit the commands:
 
-## How to run
+```
+stem - Kies een partij (of stem blanco, of niet)
+uitslag - Laat tussenstand zien
+opties - Laat mogelijke keuzes zien
+```
 
-`./bin/run_bot`
+### How to run
+
+`python -m tk17_tg_bot.bot`
 
 
-## Storage
+### Storage
 
-Storage is volatile, when you quit the `run_bot` command all results are lost.
+Storage is volatile, when you quit the Python command all results are lost.
 
 
-## Privacy
+### Privacy
 
 To ensure one vote per account per chat, the combination of user_id + chat_id
 is marked as used when a user has voted in a chat.
@@ -68,6 +76,6 @@ This bot doesn't listen to any other messages from the chat, just the commands
 listed above.
 
 
-## Development
+### Development
 
 Pull requests are welcome!
