@@ -1,5 +1,10 @@
-"""List of political parties in the 2017 Dutch parliament election."""
+"""Constants."""
 
+COMMAND_OPTIONS = 'opties'
+COMMAND_RESULT = 'uitslag'
+COMMAND_VOTE = 'stem'
+
+# List of political parties in the 2017 Dutch parliament election.
 PARTIES = [
     'VVD',
     'PvdA',
