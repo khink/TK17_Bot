@@ -30,7 +30,7 @@ def handle_vote(message):
         bot.reply_to(message, "Maak een keuze:",
                      reply_markup=markup_options())
         return
-    if vote_option.lower() in ['hitler', 'putin', 'trump']:
+    if vote_option.lower() in ['orban', 'duterte', 'putin', 'trump']:
         bot.reply_to(message, "Die hebben we niet, maar probeer de PVV eens. ")
         return
     if vote_option not in VOTING_OPTIONS:
