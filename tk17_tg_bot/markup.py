@@ -2,8 +2,7 @@
 
 from telebot import types
 
-from tk17_tg_bot.constants import COMMAND_VOTE
-from tk17_tg_bot.parties import VOTING_OPTIONS
+from tk17_tg_bot.constants import COMMAND_VOTE, VOTING_OPTIONS
 
 COLS = 2  # nr of columns in markup
 
