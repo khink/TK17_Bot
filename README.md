@@ -20,8 +20,8 @@ The list of available options will be shown when you cast an empty vote.
 Note that this is case-sensitive.
 
 There's also options for:
-- Blanco ("i will go voting but i'll leave it empty")
-- Ik ga niet stemmen ("I will stay at home and play Rocket League")
+- blanco ("I will go voting but i'll leave it empty")
+- niet ("I will stay at home and play Rocket League")
 
 
 ## About
