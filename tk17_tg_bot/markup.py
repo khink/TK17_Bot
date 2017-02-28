@@ -10,7 +10,7 @@ COLS = 2  # nr of columns in markup
 def markup_options():
     """Return options marked up for easy clicky-clicky."""
     markup = types.ReplyKeyboardMarkup(row_width=COLS)
-    for row_idx in range(len(VOTING_OPTIONS) / COLS):
+    for row_idx in range(int(len(VOTING_OPTIONS) / COLS)):
         opt_idx = row_idx * COLS
         buttons = []
         while opt_idx < (row_idx + 1) * COLS:
