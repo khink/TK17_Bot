@@ -18,8 +18,8 @@ To use this bot in Telegram, search for the user `TK17_Bot` and add it to a chat
 ### Voting options
 
 The list of available options will be shown when you cast an empty vote.
-
-Note that this is case-sensitive.
+(Note that the voting options are case-sensitive, remember this when you type
+instead of clicking one of the buttons that the bot provides.)
 
 There's also options for:
 - blanco ("I will go voting but i'll leave it empty")
@@ -28,6 +28,7 @@ There's also options for:
 There's no option for "undecided", because in the end you would end up choosing
 one of the other options.
 Just like in some types of political debate, there is no room for nuance here :)
+"Invalid" is left out intentionally, assuming no one does that on purpose.
 
 
 ## About the software
@@ -100,7 +101,6 @@ Using [pytest](http://doc.pytest.org/en/latest/). Run:
 - Run as server process
 - Logging
 - Confidential voting (don't show channel what you voted)
-- More tests
 - Nicer result rendering (pie chart, percentage, number of seats)
 - Enable closing the poll
 
