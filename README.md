@@ -105,6 +105,11 @@ Using [pytest](http://doc.pytest.org/en/latest/). Run:
 - Enable closing the poll
 
 
+### Compatibility
+
+Tried on Python2.7 and Python3.4.
+
+
 ### License
 
 GPLv3.
