@@ -96,7 +96,6 @@ Using [pytest](http://doc.pytest.org/en/latest/). Run:
 
 ### Roadmap
 
-- Persistent storage (don't lose all data on process shutdown)
 - Run as server process
 - Logging
 - Confidential voting (don't show channel what you voted)

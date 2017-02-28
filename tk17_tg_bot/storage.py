@@ -1,7 +1,5 @@
 """Storage stuff."""
 
-from collections import defaultdict
-
 from sqlalchemy import Column, Integer, String
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -28,10 +26,21 @@ class VoteCount(Base):
             (self.chat, self.option, self.count)
 
 
+class HasVoted(Base):
+    """Define model for storing who has voted."""
+
+    __tablename__ = 'hasvoted'
+    id = Column(Integer, primary_key=True)
+    chat = Column(Integer)
+    user = Column(Integer)
+
+    def __repr__(self):
+        """Object representation."""
+        return "<HasVoted(chat=%d,user=%s)>" % (self.chat, self.user)
+
+
 class Storage(object):
     """Storage class."""
-
-    users_voted = defaultdict(dict)
 
     def __init__(self, conn_string=SQL_CONNECTION_STRING, echo=False):
         """Create DB tables if necessary."""
@@ -46,9 +55,15 @@ class Storage(object):
 
     def has_voted(self, user, chat):
         """Return True if user has voted in chat."""
-        if user in self.users_voted[chat]:
+        session = self.get_session()
+        qry = session.query(HasVoted).filter(
+            HasVoted.chat.is_(chat),
+            HasVoted.user.is_(user))
+        if qry.count():
             return True
-        self.users_voted[chat][user] = True
+        new = HasVoted(chat=chat, user=user)
+        session.add(new)
+        session.commit()
         return False
 
     def show_votes(self, chat):
