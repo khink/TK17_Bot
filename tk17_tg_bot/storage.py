@@ -47,15 +47,9 @@ class Storage(object):
         self.engine = create_engine(conn_string, echo=echo)
         Base.metadata.create_all(self.engine)
 
-    def get_session(self):
-        """Create or return session."""
-        if not hasattr(self, '_session'):
-            self._session = sessionmaker(bind=self.engine)()
-        return self._session
-
     def has_voted(self, user, chat):
         """Return True if user has voted in chat."""
-        session = self.get_session()
+        session = sessionmaker(bind=self.engine)()
         qry = session.query(HasVoted).filter(
             HasVoted.chat.is_(chat),
             HasVoted.user.is_(user))
@@ -64,20 +58,22 @@ class Storage(object):
         new = HasVoted(chat=chat, user=user)
         session.add(new)
         session.commit()
+        session.close()
         return False
 
     def show_votes(self, chat):
         """Show votes for chat."""
-        session = self.get_session()
+        session = sessionmaker(bind=self.engine)()
         votes = {}
         qry = session.query(VoteCount).filter(VoteCount.chat.is_(chat))
         for vote_count in qry.all():
             votes[vote_count.option] = vote_count.count
+        session.close()
         return Result(votes).text()
 
     def store_vote(self, user, chat, vote_option):
         """Store a vote."""
-        session = self.get_session()
+        session = sessionmaker(bind=self.engine)()
         if self.has_voted(user, chat):
             return "Je hebt al gestemd in deze chat."
         qry = session.query(VoteCount).filter(
@@ -90,4 +86,5 @@ class Storage(object):
             new = VoteCount(chat=chat, option=vote_option, count=1)
             session.add(new)
         session.commit()
+        session.close()
         return "Je stem op %s is opgeslagen" % vote_option
