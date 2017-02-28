@@ -6,8 +6,8 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 from tk17_tg_bot.result import Result
+from tk17_tg_bot.settings import SQL_CONNECTION_STRING
 
-SQL_CONNECTION_STRING = 'sqlite:///tk17tgbot.db'
 Base = declarative_base()
 
 

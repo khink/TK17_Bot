@@ -8,6 +8,6 @@ pip-selfcheck.json
 share/
 *.pyc
 *.egg-info/
-tk17_tg_bot/keys.py
+tk17_tg_bot/settings.py
 .cache/
 tk17tgbot.db

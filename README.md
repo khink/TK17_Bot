@@ -48,7 +48,7 @@ python setup.py install
 ### Configure
 
 Place the [Telegram Bot API token](https://core.telegram.org/bots)
-in `tk17_tg_bot/keys.py` as in `keys.py.example`:
+in `tk17_tg_bot/settings.py` as in `settings.py.example`:
 
 `TOKEN = ''`
 
@@ -67,7 +67,9 @@ opties - Laat mogelijke keuzes zien
 
 ### Storage
 
-Storage is volatile, when you quit the Python command all results are lost.
+SQLAlchemy is used to store data. The easiest way to make this work is to edit
+`settings.py` and set `SQL_CONNECTION_STRING = 'sqlite:///database.db'`.
+This will store the file in your project directory.
 
 
 ### Privacy
@@ -76,7 +78,6 @@ To ensure one vote per account per chat, the combination of user_id + chat_id
 is marked as used when a user has voted in a chat.
 
 We don't store what option a user voted for.
-This might be relevant for privacy if we would use a persistent database.
 
 This bot doesn't listen to any other messages from the chat, just the commands
 listed above.

@@ -1,0 +1,4 @@
+"""Settings."""
+
+SQL_CONNECTION_STRING = 'sqlite:///tk17tgbot.db'
+TOKEN = '99999999999:AAqwerty1234567'
