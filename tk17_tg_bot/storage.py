@@ -2,13 +2,11 @@
 
 from collections import defaultdict
 
-from telebot import TeleBot
-
 from tk17_tg_bot.result import Result
 
 
-class TK17TgBot(TeleBot):
-    """Subclass telebot for votes storage."""
+class Storage(object):
+    """Storage class."""
 
     votes = defaultdict(dict)
     users_voted = defaultdict(dict)

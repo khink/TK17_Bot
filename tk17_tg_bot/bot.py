@@ -2,11 +2,11 @@
 
 import logging
 
-from telebot import logger
+from telebot import TeleBot, logger
 
 from tk17_tg_bot.keys import TOKEN
 from tk17_tg_bot.markup import markup_options
-from tk17_tg_bot.storage import TK17TgBot
+from tk17_tg_bot.storage import Storage
 from tk17_tg_bot.constants import (
     COMMAND_OPTIONS,
     COMMAND_RESULT,
@@ -17,7 +17,8 @@ from tk17_tg_bot.constants import (
 logger = logger
 logger.setLevel(logging.INFO)
 
-bot = TK17TgBot(TOKEN)
+bot = TeleBot(TOKEN)
+storage = Storage()
 
 
 @bot.message_handler(commands=[COMMAND_VOTE])
@@ -40,14 +41,14 @@ def handle_vote(message):
         return
     bot.reply_to(
         message,
-        bot.store_vote(message.from_user.id, message.chat.id, vote_option),
+        storage.store_vote(message.from_user.id, message.chat.id, vote_option),
     )
 
 
 @bot.message_handler(commands=[COMMAND_RESULT])
 def result(message):
     """Show result."""
-    bot.reply_to(message, bot.show_votes(message.chat.id))
+    bot.reply_to(message, storage.show_votes(message.chat.id))
 
 
 @bot.message_handler(commands=[COMMAND_OPTIONS])

@@ -1,6 +1,6 @@
 """Test formatting of results."""
 
-from tk17_tg_bot.storage import TK17TgBot
+from tk17_tg_bot.storage import Storage
 
 
 def test_storage():
@@ -10,7 +10,7 @@ def test_storage():
     """
     user_1_id = 500
     chat_1_id = 1000
-    storage = TK17TgBot('dummytoken')
+    storage = Storage()
     # cast vote
     result = storage.store_vote(user_1_id, chat_1_id, 'henk')
     # test voting feedback
