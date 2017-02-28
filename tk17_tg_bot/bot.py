@@ -21,6 +21,21 @@ bot = TeleBot(TOKEN)
 storage = Storage()
 
 
+@bot.message_handler(commands=['start', 'help'])
+def send_welcome_message(message):
+    """Welcome message and help."""
+    bot.send_message(
+        message.chat.id, """
+        Voeg deze bot toe aan uw kanaal om een poll te starten.
+
+        Commando's:
+        /opties - Laat knoppen met mogelijke keuzes zien
+        /stem - Kies een partij (of stem blanco, of niet)
+        /uitslag - Laat tussenstand zien
+"""
+    )
+
+
 @bot.message_handler(commands=[COMMAND_VOTE])
 def handle_vote(message):
     """Handle a vote."""

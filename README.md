@@ -59,6 +59,7 @@ Using Botfather, add an image to the bot, and edit the commands:
 stem - Kies een partij (of stem blanco, of niet)
 uitslag - Laat tussenstand zien
 opties - Laat mogelijke keuzes zien
+help - Laat dit scherm zien
 ```
 
 ### How to run
