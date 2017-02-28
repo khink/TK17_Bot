@@ -11,7 +11,7 @@ class Result(object):
         # list of options in decreasing popularity
         self.options = sorted(votes, key=self.votes.get, reverse=True)
 
-    def __str__(self):
+    def text(self):
         """Render as string."""
         if not self.votes:
             return "Er is nog niet gestemd."

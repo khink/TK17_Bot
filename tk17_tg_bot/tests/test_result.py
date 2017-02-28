@@ -11,5 +11,5 @@ raw_result = {
 
 def test_order():
     """Test that results option are reverse-sorted on popularity."""
-    result = Result(raw_result)
-    assert str(result) == """noot: 3\naap: 2\nmies: 1"""
+    result = Result(raw_result).text()
+    assert result == """noot: 3\naap: 2\nmies: 1"""

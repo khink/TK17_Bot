@@ -18,10 +18,11 @@ class TK17TgBot(TeleBot):
         if user in self.users_voted[chat]:
             return True
         self.users_voted[chat][user] = True
+        return False
 
     def show_votes(self, chat):
         """Show votes for chat."""
-        return Result(self.votes[chat])
+        return Result(self.votes[chat]).text()
 
     def store_vote(self, user, chat, vote_option):
         """Store a vote."""
