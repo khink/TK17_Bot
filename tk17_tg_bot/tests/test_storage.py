@@ -10,7 +10,7 @@ def test_storage():
     """
     user_1_id = 500
     chat_1_id = 1000
-    storage = Storage()
+    storage = Storage(conn_string='sqlite:///:memory:', echo=True)
     # cast vote
     result = storage.store_vote(user_1_id, chat_1_id, 'henk')
     # test voting feedback
