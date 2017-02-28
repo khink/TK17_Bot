@@ -18,7 +18,7 @@ def markup_options():
             msg = "/%s %s" % (COMMAND_VOTE, VOTING_OPTIONS[opt_idx])
             buttons.append(types.KeyboardButton(msg))
             opt_idx += 1
-            if opt_idx >= len(VOTING_OPTIONS) - 1:
+            if opt_idx >= len(VOTING_OPTIONS):
                 # not enough options to put COLS options in last row
                 break
         markup.row(*buttons)
