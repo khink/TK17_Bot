@@ -4,8 +4,8 @@ import logging
 
 from telebot import TeleBot, logger
 
-from tk17_tg_bot.keys import TOKEN
 from tk17_tg_bot.markup import markup_options
+from tk17_tg_bot.settings import TOKEN
 from tk17_tg_bot.storage import Storage
 from tk17_tg_bot.constants import (
     COMMAND_OPTIONS,
